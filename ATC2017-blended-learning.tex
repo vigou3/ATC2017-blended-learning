@@ -1,0 +1,103 @@
+%%% Copyright (C) 2017 Vincent Goulet
+%%%
+%%% This file and all files included or input by this one (and
+%%% recursively) are part of the project "The Best of Both Worlds:
+%%% Using Blended Learning in Actuarial Science Courses - Actuarial
+%%% Teaching Conference 2017"
+%%% http://github.com/vigou3/ATC2017-blended-learning
+%%%
+%%% This work is licensed under a Creative Commons
+%%% Attribution-ShareAlike 4.0 International License.
+%%% http://creativecommons.org/licenses/by-sa/4.0/
+
+\documentclass[aspectratio=1610,10pt,xcolor=x11names]{beamer}
+  \usepackage{fontawesome}
+  \usepackage{changepage}                % page licence
+  \usepackage{tabularx}                  % page licence
+  \usepackage{framed}                    % env. leftbar
+  \usepackage[export]{adjustbox}         % cadre autour image
+  \usepackage[overlay,absolute]{textpos} % covers
+  \usepackage{metalogo}                  % logo \XeLaTeX
+
+  %% ==================
+  %%  Publication info
+  %% ==================
+  \renewcommand{\year}{2017}
+
+  %% ===============================
+  %%  Look and feel of the document
+  %% ===============================
+
+  %% Beamer theme
+  \usetheme{metropolis}
+
+  %% Additionnal colors
+  \definecolor{link}{rgb}{0,0.4,0.6}        % internal links
+  \definecolor{url}{rgb}{0.6,0,0}           % external links
+  \definecolor{rouge}{rgb}{0.85,0,0.07}     % UL red stripe
+  \definecolor{or}{rgb}{1,0.8,0}            % UL yellow stripe
+
+  %% Hyperlinks
+  \hypersetup{%
+    pdfauthor = {Vincent Goulet},
+    pdftitle = {The Best of Both Worlds: Using Blended Learning in Actuarial Science Courses},
+    colorlinks = {true},
+    linktocpage = {true},
+    allcolors = {link},
+    urlcolor = {url},
+    pdfpagemode = {UseOutlines},
+    pdfstartview = {Fit},
+    bookmarksopen = {true},
+    bookmarksnumbered = {true},
+    bookmarksdepth = {subsection}}
+
+  %% Bibliographie
+  \bibliographystyle{francais}
+
+  %% =====================
+  %%  Nouvelles commandes
+  %% =====================
+
+  \newcommand{\link}[2]{\href{#1}{#2~\raisebox{-0.2ex}{\faExternalLink}}}
+  \newcommand{\meta}[1]{\ensuremath\langle{\normalfont\itshape #1\/}\ensuremath\rangle}
+
+  %% Link to GitHub on copyright page
+  \newcommand{\viewsource}[1]{%
+    \href{#1}{%
+      \makebox[2.5mm]{\raisebox{-1pt}{\footnotesize\faGithub}}\;%
+      {\sffamily View on GitHub}}}
+
+  %%% =======
+  %%%  Varia
+  %%% =======
+
+  %% Lengths used to compose front and rear covers.
+  \newlength{\banderougewidth} \newlength{\banderougeheight}
+  \newlength{\bandeorwidth}    \newlength{\bandeorheight}
+  \newlength{\imageheight}     \newlength{\imagewidth}
+  \newlength{\logoheight}
+  \newlength{\gapwidth}
+
+%  \includeonly{couverture-avant}
+
+\begin{document}
+
+%% frontmatter
+\include{frontcover}
+\include{frontispice}
+\include{licence}
+
+%% mainmatter
+
+
+%% backmatter
+\include{colophon}
+\include{backcover}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:
