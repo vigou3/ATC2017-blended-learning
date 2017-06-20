@@ -6,7 +6,7 @@
   From heavy note taking sessions\dots \\
   \begin{minipage}{0.55\linewidth}
     \includegraphics[width=\linewidth,keepaspectratio]{796px-Monkcopyistwoodcut} \\
-    \tiny Wikimedia Commons
+    \tiny \href{https://commons.wikimedia.org/wiki/File:Monkcopyistwoodcut.jpg}{Wikimedia Commons}
   \end{minipage}
 \end{frame}
 
@@ -15,7 +15,7 @@
   \dots\ to PowerPoint Syndrome \\
   \begin{minipage}{\linewidth}
     \includegraphics[width=\linewidth,keepaspectratio]{Satterfield_watches_Congress_be_boring} \\
-    \tiny Wikimedia Commons
+    \tiny \href{https://commons.wikimedia.org/wiki/File:Satterfield_watches_Congress_be_boring.jpg}{Wikimedia Commons}
   \end{minipage}
 \end{frame}
 
@@ -56,9 +56,9 @@
   \frametitle{Garrison and Vaughan (2008)}
 
   \begin{quote}
-    Thoughtful fusion of face-to-face and online learning
-    experiences [\dots] optimally integrated such that the strengths
-    of each are blended into a unique learning experience congruent
+    Thoughtful fusion of face-to-face and online learning experiences
+    [\dots] optimally integrated such that \alert{the strengths of
+      each} are blended into a unique learning experience congruent
     with the context and intended educational purpose.
   \end{quote}
 \end{frame}
@@ -66,7 +66,7 @@
 \begin{frame}
   \frametitle{Models of Blended Learning}
 
-  \begin{description}[style=nextline]
+  \begin{description}[Enriched-virtual model]
   \item[Rotation model] Online engagement embedded within face-to-face
     forms of instruction in a cyclical manner
   \item[Flex model] Multiple students engaged primarily online, but
@@ -100,6 +100,7 @@
     \begin{textblock*}{0mm}(80mm,78mm)
       \setlength{\unitlength}{1mm}
       \begin{picture}(0,0)
+        \color{alert}
         \put(-8,21){\framebox(16,6.5)[bl]{}}
         \put(0,0){\line(0,1){21}}
       \end{picture}
@@ -114,11 +115,174 @@
     \begin{textblock*}{0mm}(97mm,78mm)
       \setlength{\unitlength}{1mm}
       \begin{picture}(0,0)
+        \color{alert}
         \put(-8,21){\framebox(16,6.5)[bl]{}}
         \put(0,0){\line(0,1){21}}
       \end{picture}
     \end{textblock*}}
 \end{frame}
+
+
+\section{How I Stopped Worrying \newline and Love Blended Learning}
+
+\begin{frame}[fragile=singleslide]
+  \frametitle{Context}
+
+  \begin{itemize}
+  \item Numerical Methods course with R Programming component
+  \item Teaching of programming part further \alert{left} on the blended
+    learning continuum
+    \begin{center}
+      \medskip
+      \includegraphics[width=0.7\linewidth,keepaspectratio,%
+        trim=0 0 0 230,clip]{Continuum-of-technology-based-teaching-2}
+      \setlength{\unitlength}{1mm}
+      \begin{picture}(0,0)
+        \color{alert}
+        \put(-75,10){\framebox(19.8,8)[bl]{}}
+      \end{picture}
+    % \begin{minipage}{0.3\linewidth}
+    %   \includegraphics[width=\linewidth,keepaspectratio,frame]{slides-extract.png} \\
+    %   \includegraphics[width=\linewidth,keepaspectratio,frame]{bases-extract.png} \\
+    % \end{minipage}
+    \end{center}
+
+  \item Strong push towards fully online (distance) learning at Université Laval
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Motivation}
+
+  \begin{itemize}
+  \item \alert{Not} to increase course accessibility
+  \item Administrative duties
+    \begin{itemize}
+    \item looking for a more free-standing course
+    \end{itemize}
+  \item Ineffectiveness of assignments
+    \begin{itemize}
+    \item no feedback to students
+    \item complaints about workload
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%% These are defined outside the following frame to avoid troubles
+%% with overlays.
+\setlength{\unitlength}{1mm}
+\newsavebox{\activity}
+\savebox{\activity}(4,0){\color{alert}\circle*{4}}
+\newsavebox{\week}
+\savebox{\week}(12,0){\color{dark}\rule[-1mm]{12mm}{2mm}}
+
+\begin{frame}
+  \frametitle{My Hybrid Teaching Model}
+  \centering
+  \begin{picture}(125,60)
+    \put(0,40){\usebox{\activity}}
+    \put(4,40){\usebox{\week}}
+    \put(18,40){\usebox{\week}} \put(30,40){\usebox{\activity}}
+    \put(34,40){\usebox{\week}} \put(46,40){\usebox{\activity}}
+    \put(50,40){\usebox{\week}}
+    \put(64,40){\usebox{\week}} \put(70,44){\makebox(0,0){\color{alert}\faPlusSquare}}
+    \put(78,40){\usebox{\week}} \put(90,40){\usebox{\activity}}
+    \put(94,40){\usebox{\week}}
+    \multiput(109,40)(2.5,0){3}{\circle*{0.7}}
+
+    \only<2->{
+      \put(0,37.5){\line(0,-1){31}}
+      \put(1,30){%
+        \begin{minipage}[t]{35mm}
+          \faUsers \\ Launch activity
+          \begin{itemize}
+          \item welcome
+          \item course outline
+          \item software install
+          \end{itemize}
+        \end{minipage}}
+    }
+
+    \only<3->{
+      \put(40,37.5){\line(0,-1){31}}
+      \put(41,30){%
+        \begin{minipage}[t]{50mm}
+          \faUser \\ Independent work
+          \begin{itemize}
+          \item theory and examples
+          \item exercices
+          \item formative assessments
+          \end{itemize}
+        \end{minipage}}
+    }
+
+    \only<4->{
+      \put(90,37.5){\line(0,-1){26}}
+      \put(91,30){%
+        \begin{minipage}[t]{35mm}
+          \faUsers \\ Classroom activities
+          \begin{itemize}
+          \item review of material
+          \item team project
+          \end{itemize}
+        \end{minipage}}
+    }
+
+    \only<5->{
+      \put(70,46.2){\line(0,1){12}}
+      \put(71,50){%
+        \parbox[b]{30mm}{\faShareAlt \\ Online tutorial}}
+    }
+  \end{picture}
+\end{frame}
+
+\section{Demo}
+
+\section{Field Report}
+
+\begin{frame}
+  \frametitle{Students Feedback}
+
+  \begin{minipage}{0.48\textwidth}
+    They like
+    \begin{itemize}
+    \item Autonomy
+    \item Flexible schedule
+    \item Variety of learning experiences
+    \end{itemize}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
+    They like less
+    \begin{itemize}
+    \item Autonomy
+    \item Apparent lack of supervision
+    \item Time constrained (60~min.) projects
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tips and Tricks}
+
+  \begin{itemize}[<+->]
+  \item Trust the students
+  \item Don't trust the students ;-)
+  \end{itemize}
+
+  \begin{itemize}[<3->]
+  \item Plan, starting from learning objectives
+  \item Provide a clear roadmap
+  \item Vary learning experiences
+  \item Write exam questions congruent with learning objectives
+  \item Avoid overengineering
+  \end{itemize}
+
+  \begin{itemize}[<4->]
+  \item You will need a learning management system (LMS)
+  \end{itemize}
+\end{frame}
+
 
 %%% Local Variables:
 %%% mode: latex
