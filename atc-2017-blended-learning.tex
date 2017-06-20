@@ -11,6 +11,7 @@
 %%% http://creativecommons.org/licenses/by-sa/4.0/
 
 \documentclass[aspectratio=1610,10pt,xcolor=x11names]{beamer}
+  \usepackage[round]{natbib}
   \usepackage{fontawesome}
   \usepackage{changepage}                % page licence
   \usepackage{tabularx}                  % page licence
@@ -18,7 +19,6 @@
   \usepackage[export]{adjustbox}         % cadre autour image
   \usepackage[overlay,absolute]{textpos} % covers
   \usepackage{metalogo}                  % logo \XeLaTeX
-  \usepackage{enumitem}
 
   %% ==================
   %%  Publication info
@@ -37,6 +37,8 @@
   \definecolor{url}{rgb}{0.6,0,0}           % external links
   \definecolor{rouge}{rgb}{0.85,0,0.07}     % UL red stripe
   \definecolor{or}{rgb}{1,0.8,0}            % UL yellow stripe
+  \colorlet{alert}{mLightBrown} % alias for Metropolis color
+  \colorlet{dark}{mDarkTeal}    % alias for Metropolis color
 
   %% Hyperlinks
   \hypersetup{%
@@ -52,8 +54,12 @@
     bookmarksnumbered = {true},
     bookmarksdepth = {subsection}}
 
-  %% Bibliographie
-  \bibliographystyle{francais}
+  %% Bibliography
+  %% Couple of hacks needed to have beamer and natbib play nice with
+  %% each other.
+  \renewcommand{\newblock}{}    % https://tex.stackexchange.com/a/1971/24355
+  \renewcommand{\bibsection}{}  % drop \section heading
+  \bibliographystyle{plainnat}
 
   %% =====================
   %%  Nouvelles commandes
@@ -92,6 +98,7 @@
 \include{mainmatter}
 
 %% backmatter
+\include{bibliography}
 \include{colophon}
 \include{backcover}
 
