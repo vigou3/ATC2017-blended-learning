@@ -22,6 +22,11 @@ actuarial science students. For teachers and instructors interested in
 converting their course to blended learning, we will provide our own
 list of dos and don'ts.
 
+## Obtaining the slides
+
+See the [releases]({{ site.github.repository_url }}/releases) page to
+download the latest version of the slides in PDF format.
+
 ## Changelog
 
 ### 1.0 (in development)
