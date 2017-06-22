@@ -45,13 +45,13 @@ release:
 	awk 'BEGIN { ORS=" "; print "{\"tag_name\": \"v${VERSION}\"," } \
 	      /^$$/ { next } \
 	      /^## Changelog/ { state=0; next } \
-              (state==0) && /^### / { state=1; out=$$2; \
-	                             for(i=3;i<=NF;i++){out=out" "$$i}; \
+              (state==0) && /^### / { state = 1; out = $$2; \
+	                             for(i=3; i<=NF; i++) { out = out" "$$i }; \
 	                             printf "\"name\": \"Version %s\", \"body\": \"", out; \
 	                             next } \
-	      (state==1) && /^### / { state=2; print "\","; next } \
+	      (state==1) && /^### / { exit } \
 	      state==1 { printf "%s\\n", $$0 } \
-	      END { print "\"draft\": false, \"prerelease\": false}" }' \
+	      END { print "\", \"draft\": false, \"prerelease\": false}" }' \
 	      ${README} >> relnotes.in
 	curl --data @relnotes.in ${REPOSURL}/releases?access_token=${OAUTHTOKEN}
 	rm relnotes.in
