@@ -44,7 +44,7 @@ release:
 	touch relnotes.in
 	awk 'BEGIN { ORS=" "; print "{\"tag_name\": \"v${VERSION}\"," } \
 	      /^$$/ { next } \
-	      /^## Historique/ { state=0; next } \
+	      /^## Changelog/ { state=0; next } \
               (state==0) && /^### / { state=1; out=$$2; \
 	                             for(i=3;i<=NF;i++){out=out" "$$i}; \
 	                             printf "\"name\": \"Version %s\", \"body\": \"", out; \
