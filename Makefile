@@ -36,7 +36,9 @@ doc: ${MASTER}
 ${MASTER}: *.tex
 	${TEXI2DVI} ${MASTER:.pdf=.tex}
 
-release:
+release: create-release upload
+
+create-release:
 	@echo ----- Creating release on GitHub...
 	@if [ -n "$(shell git status --porcelain | grep -v '^??')" ]; then \
 	    echo "uncommitted changes in repository; not creating release"; exit 2; fi
