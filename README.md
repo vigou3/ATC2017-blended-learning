@@ -29,6 +29,10 @@ download the latest version of the slides in PDF format.
 
 ## Changelog
 
+### 1.0a (2017-06-26)
+
+- Correction of typos.
+
 ### 1.0 (2017-06-22)
 
 - Initial release.
