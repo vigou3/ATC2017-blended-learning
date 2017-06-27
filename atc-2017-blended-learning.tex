@@ -11,14 +11,16 @@
 %%% http://creativecommons.org/licenses/by-sa/4.0/
 
 \documentclass[aspectratio=1610,10pt,xcolor=x11names]{beamer}
-  \usepackage[round]{natbib}
-  \usepackage{fontawesome}
+  \usepackage[round]{natbib}             % references
+  \usepackage{fontawesome}               % various icons
   \usepackage{changepage}                % page licence
   \usepackage{tabularx}                  % page licence
   \usepackage{framed}                    % env. leftbar
   \usepackage[export]{adjustbox}         % cadre autour image
   \usepackage[overlay,absolute]{textpos} % covers
   \usepackage{metalogo}                  % logo \XeLaTeX
+  \usepackage{actuarialsymbol}           % symbols in One More Thing
+  \usepackage{unicode-math}              % idem
 
   %% ==================
   %%  Publication info
@@ -61,9 +63,9 @@
   \renewcommand{\bibsection}{}  % drop \section heading
   \bibliographystyle{abbrvnat}
 
-  %% =====================
-  %%  Nouvelles commandes
-  %% =====================
+  %% ==============
+  %%  New commands
+  %% ==============
 
   \newcommand{\link}[2]{\href{#1}{#2~\raisebox{-0.2ex}{\faExternalLink}}}
   \newcommand{\meta}[1]{\ensuremath\langle{\normalfont\itshape #1\/}\ensuremath\rangle}
@@ -73,6 +75,13 @@
     \href{#1}{%
       \makebox[2.5mm]{\raisebox{-1pt}{\footnotesize\faGithub}}\;%
       {\sffamily View on GitHub}}}
+
+  %% single entry for symbol and shortcut lists
+  %% http://tex.stackexchange.com/a/128441
+  \usepackage{xparse}
+  \ExplSyntaxOn
+  \NewDocumentCommand{\rshowcase}{v} { \texttt{#1} & \tl_rescan:nn { } {\large $#1$ } }
+  \ExplSyntaxOff
 
   %%% =======
   %%%  Varia
@@ -99,6 +108,7 @@
 
 %% backmatter
 \include{bibliography}
+\include{onemorething}
 \include{colophon}
 \include{backcover}
 

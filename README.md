@@ -29,6 +29,10 @@ download the latest version of the slides in PDF format.
 
 ## Changelog
 
+### 1.1 (2017-06-26)
+
+- Added a "One More Thing" slide shamelessly promoting actuarialsymbol.
+
 ### 1.0a (2017-06-26)
 
 - Correction of typos.
