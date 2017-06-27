@@ -29,9 +29,12 @@ download the latest version of the slides in PDF format.
 
 ## Changelog
 
-### 1.1 (2017-06-26)
+### 1.1 (2017-06-27)
 
-- Added a "One More Thing" slide shamelessly promoting actuarialsymbol.
+- Added a "One More Thing" slide shamelessly promoting
+  actuarialsymbol.
+- Added links to the class notes and the YouTube channel after the
+  "Demo" title slide.
 
 ### 1.0a (2017-06-26)
 
