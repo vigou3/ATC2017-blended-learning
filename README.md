@@ -24,7 +24,7 @@ list of dos and don'ts.
 
 ## Obtaining the slides
 
-See the [releases](https://github.com/vigou3/atc-2017-blended-learning/releases) page to
+See the [releases](https://github.com/vigou3/atc-2017-blended-learning/releases/latest) page to
 download the latest version of the slides in PDF format.
 
 ## Changelog
